@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وەرەقەی ئۆکەی</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .name-field {
+            width: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .data-field {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .name-field:focus, .data-field:focus {
+            border-color: #3498db;
+        }
+        .name-field::placeholder, .data-field::placeholder {
+            color: #999;
+        }
+        @media (max-width: 600px) {
+            .row {
+                flex-direction: column;
+            }
+            .name-field {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>وەرەقەی ئۆکەی</h1>
+    <div class="form-container">
+        <form id="okay-form">
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ١" data-index="name-1-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ١" data-index="name-1-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ١" data-index="data-1-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ١" data-index="data-1-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٢" data-index="name-2-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٢" data-index="name-2-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٢" data-index="data-2-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٢" data-index="data-2-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٣" data-index="name-3-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٣" data-index="name-3-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٣" data-index="data-3-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٣" data-index="data-3-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٤" data-index="name-4-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٤" data-index="name-4-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٤" data-index="data-4-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٤" data-index="data-4-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٥" data-index="name-5-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٥" data-index="name-5-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٥" data-index="data-5-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٥" data-index="data-5-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٦" data-index="name-6-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٦" data-index="name-6-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٦" data-index="data-6-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٦" data-index="data-6-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٧" data-index="name-7-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٧" data-index="name-7-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٧" data-index="data-7-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٧" data-index="data-7-2">
+            </div>
+            <div class="row">
+                <input type="text" class="name-field" placeholder="ناوی یەکەم - ڕیز ٨" data-index="name-8-1">
+                <input type="text" class="name-field" placeholder="ناوی دووەم - ڕیز ٨" data-index="name-8-2">
+                <input type="text" class="data-field" placeholder="خانەی یەکەم - ڕیز ٨" data-index="data-8-1">
+                <input type="text" class="data-field" placeholder="خانەی دووەم - ڕیز ٨" data-index="data-8-2">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Load saved data from Local Storage
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('.name-field, .data-field');
+            inputs.forEach(input => {
+                const savedValue = localStorage.getItem(input.dataset.index);
+                if (savedValue) {
+                    input.value = savedValue;
+                }
+                // Save data to Local Storage on input
+                input.addEventListener('input', () => {
+                    localStorage.setItem(input.dataset.index, input.value);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
